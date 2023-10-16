@@ -1,11 +1,8 @@
-def f(list_test):
-    a = list_test.pop(0)
-    if(len(list_test) == 0):
-        print(a, end=' ')
+def f(List):
+    if List == []:
         return
-    f(list_test)
-    print(a, end=' ')
+    print(List.pop(), end=' ')
+    f(List)
 
-list_test = list(input().split())
-
-f(list_test)
+List = list(input().split())
+f(List)

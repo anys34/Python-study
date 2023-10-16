@@ -1,8 +1,7 @@
-def f(list_test):
-    if (len(list_test) == 0):
+def f(List):
+    if List == []:
         return 0
-    return int(list_test.pop()) + f(list_test)
+    return List.pop() + f(List)
 
-list_test = list(input().split())
-
-print(f(list_test))
+List = list(map(int, input().split()))
+print(f(List))
